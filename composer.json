@@ -29,7 +29,8 @@
 	],
     "autoload": {
         "psr-0": { "": "src/" }
-    },  
+    },
+    "include_path" : "./vendor/seagullframework/lib-pear/src",
     "require" : {
         "php" : ">=5.2.1",
 		"seagullframework/lib-sgl" : "@dev",
