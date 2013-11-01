@@ -1,6 +1,6 @@
 {
-    "description" : "Seagull Framework Installer",
-    "name" : "seagullframework/installer",
+    "description" : "Seagull Framework sandbox",
+    "name" : "seagullframework/sandbox",
     "keywords" : [
         "framework",
         "php"
@@ -17,6 +17,12 @@
             "homepage" : "http://trac.seagullproject.org/wiki/Community"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:demianturner/seagullframework-lib-sgl.git"
+        }
+	],
     "autoload": {
         "psr-0": { "": "src/" }
     },  
