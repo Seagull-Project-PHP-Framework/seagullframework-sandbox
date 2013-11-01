@@ -85,6 +85,9 @@ function getSystemTime()
     return $resultTime;
 }
 
+require '../vendor/autoload.php';
+//require '../data/ary.languages.php';
+
 //  initialise
 $rootDir = realpath(dirname(__FILE__) . '/..');
 $varDir = realpath(dirname(__FILE__) . '/../var');
@@ -100,8 +103,6 @@ define('SGL_MINIMAL_INSTALL', (is_file($rootDir . '/MINIMAL_INSTALL.txt'))
     ? true
     : false);
 
-require_once $rootDir . '/lib/SGL/FrontController.php';
-require_once $rootDir . '/lib/SGL/Install/Common.php';
 SGL_FrontController::init();
 
 session_start();
