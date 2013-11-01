@@ -164,25 +164,6 @@ if (is_file(SGL_PATH . '/var/INSTALL_COMPLETE.php')
     }
 }
 
-// load QuickFormController libs
-require_once 'HTML/QuickForm/Controller.php';
-require_once 'HTML/QuickForm/Action/Next.php';
-require_once 'HTML/QuickForm/Action/Back.php';
-require_once 'HTML/QuickForm/Action/Display.php';
-
-//  load wizard screens and qf overrides
-require_once SGL_PATH . '/lib/SGL/Install/WizardLicenseAgreement.php';
-require_once SGL_PATH . '/lib/SGL/Install/WizardSetupAuth.php';
-require_once SGL_PATH . '/lib/SGL/Install/WizardDetectEnv.php';
-require_once SGL_PATH . '/lib/SGL/Install/WizardTestDbConnection.php';
-require_once SGL_PATH . '/lib/SGL/Install/WizardCreateDb.php';
-require_once SGL_PATH . '/lib/SGL/Install/WizardCreateAdminUser.php';
-require_once SGL_PATH . '/lib/SGL/Install/QuickFormOverride.php';
-
-//  load tasks
-require_once SGL_PATH . '/lib/SGL/Task/DetectEnv.php';
-require_once SGL_PATH . '/lib/SGL/Task/Install.php';
-
 //  setup temporary logging for Seagull install
 $log = "$varDir/install.log";
 $ok = @ini_set('error_log', $log);
@@ -198,7 +179,6 @@ class ActionProcess extends HTML_QuickForm_Action
         $dbh =  SGL_DB::singleton();
         $res = false;
         if (!PEAR::isError($dbh)) {
-            require_once SGL_CORE_DIR . '/Sql.php';
             $table = SGL_Sql::addTablePrefix('module');
             $query = 'SELECT COUNT(*) FROM ' . $table;
             $res = $dbh->getOne($query);
@@ -265,16 +245,16 @@ class ActionProcess extends HTML_QuickForm_Action
 
 //  start wizard
 $wizard = new HTML_QuickForm_Controller('installationWizard');
-$wizard->addPage(new WizardLicenseAgreement('page1'));
-$wizard->addPage(new WizardSetupAuth('page2'));
-$wizard->addPage(new WizardDetectEnv('page3'));
-$wizard->addPage(new WizardTestDbConnection('page4'));
-$wizard->addPage(new WizardCreateDb('page5'));
-$wizard->addPage(new WizardCreateAdminUser('page6'));
+$wizard->addPage(new SGL_Install_WizardLicenseAgreement('page1'));
+$wizard->addPage(new SGL_Install_WizardSetupAuth('page2'));
+$wizard->addPage(new SGL_Install_WizardDetectEnv('page3'));
+$wizard->addPage(new SGL_Install_WizardTestDbConnection('page4'));
+$wizard->addPage(new SGL_Install_WizardCreateDb('page5'));
+$wizard->addPage(new SGL_Install_WizardCreateAdminUser('page6'));
 
 // We actually add these handlers here for the sake of example
 // They can be automatically loaded and added by the controller
-$wizard->addAction('display', new ActionDisplay());
+$wizard->addAction('display', new SGL_Install_ActionDisplay());
 $wizard->addAction('next', new HTML_QuickForm_Action_Next());
 $wizard->addAction('back', new HTML_QuickForm_Action_Back());
 
