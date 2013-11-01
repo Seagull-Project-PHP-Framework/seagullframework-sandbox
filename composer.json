@@ -37,6 +37,5 @@
     },
     "require-dev" : {
         "phpunit/phpunit" : "~3.7.10"
-    },
-    "include_path" : "./vendor/seagullframework/lib-pear/src"
+    }
 }
