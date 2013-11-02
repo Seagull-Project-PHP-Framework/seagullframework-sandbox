@@ -35,5 +35,5 @@
 		"seagullframework/lib-sgl" : "@dev",
         "seagullframework/lib-pear" : "@dev"
     },
-    "include_path" : "./vendor/seagullframework/lib-pear/src"    
+    "include-path" : "./vendor/seagullframework/lib-pear/src"
 }
