@@ -29,6 +29,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/demianturner/seagullframework-module-default.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/demianturner/seagullframework-module-navigation.git"
         }
 	],
     "autoload": {
@@ -38,7 +42,8 @@
         "php" : ">=5.2.1",
 		"seagullframework/lib-sgl" : "@dev",
         "seagullframework/lib-pear" : "@dev",
-        "seagullframework/module-default" : "@dev"
+        "seagullframework/module-default" : "@dev",
+        "seagullframework/module-navigation" : "@dev"
     },
     "include-path" : [
             "./vendor/seagullframework/lib-pear/src"
