@@ -33,6 +33,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/demianturner/seagullframework-module-navigation.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/demianturner/seagullframework-module-user.git"
         }
 	],
     "autoload": {
@@ -43,7 +47,8 @@
 		"seagullframework/lib-sgl" : "@dev",
         "seagullframework/lib-pear" : "@dev",
         "seagullframework/module-default" : "@dev",
-        "seagullframework/module-navigation" : "@dev"
+        "seagullframework/module-navigation" : "@dev",
+        "seagullframework/module-user" : "@dev"
     },
     "include-path" : [
             "./vendor/seagullframework/lib-pear/src"
