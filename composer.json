@@ -20,15 +20,15 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:demianturner/seagullframework-lib-sgl.git"
+            "url": "https://github.com/demianturner/seagullframework-lib-sgl.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:demianturner/seagullframework-lib-pear.git"
+            "url": "https://github.com/demianturner/seagullframework-lib-pear.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:demianturner/seagullframework-module-default.git"
+            "url": "https://github.com/demianturner/seagullframework-module-default.git"
         }
 	],
     "autoload": {
