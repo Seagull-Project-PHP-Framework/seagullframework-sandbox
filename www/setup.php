@@ -85,7 +85,7 @@ function getSystemTime()
     return $resultTime;
 }
 
-require '../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 //require '../data/ary.languages.php';
 
 //  initialise

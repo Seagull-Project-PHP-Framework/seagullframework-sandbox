@@ -12,6 +12,8 @@ function getSystemTime()
     return $resultTime;
 }
 
+require_once '../vendor/autoload.php';
+
 //  start timer
 define('SGL_START_TIME', getSystemTime());
 
@@ -22,10 +24,6 @@ $varDir = realpath(dirname(__FILE__) . '/../var');
 define('SGL_CACHE_LIBS', (is_file($varDir . '/ENABLE_LIBCACHE.txt'))
     ? true
     : false);
-
-if (is_file($rootDir .'/lib/SGL/FrontController.php')) {
-    require_once $rootDir .'/lib/SGL/FrontController.php';
-}
 
 // determine if setup needed
 if (!is_file($varDir . '/INSTALL_COMPLETE.php')) {
