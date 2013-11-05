@@ -55,6 +55,12 @@
         "seagullframework/module-user" : "@dev",
         "seagullframework/module-block" : "@dev"
     },
+
+    "scripts": {
+        "post-install-cmd": [
+            "SGL_Task_PostInstallSetup::run"
+            ]
+    },
     "include-path" : [
             "./vendor/seagullframework/lib-pear/src"
     ]
