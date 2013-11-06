@@ -57,8 +57,9 @@
     },
 
     "scripts": {
+        "pre-install-cmd" : "MyProject\\Installer::preInstall",
         "post-install-cmd": [
-            "SGL_Task_PostInstallSetup::run"
+            "MyProject\\Installer::postInstall"
             ]
     },
     "include-path" : [
