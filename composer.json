@@ -49,6 +49,7 @@
     "require" : {
         "php" : ">=5.2.1",
 		"seagullframework/lib-sgl" : "@dev",
+        "seagullframework/lib-sgl2" : "@dev",
         "seagullframework/lib-pear" : "@dev",
         "seagullframework/module-default" : "@dev",
         "seagullframework/module-navigation" : "@dev",
