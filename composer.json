@@ -63,7 +63,7 @@
 
     "scripts": {
         "post-install-cmd": [
-            "MyProject\\Installer::postInstall"
+            "SGL2\\Installer::postInstall"
             ]
     },
     "include-path" : [
