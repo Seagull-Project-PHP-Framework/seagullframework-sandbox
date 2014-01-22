@@ -58,7 +58,7 @@
     },
 
     "scripts": {
-        //"pre-install-cmd" : "MyProject\\Installer::preInstall",
+        /*"pre-install-cmd" : "MyProject\\Installer::preInstall",*/
         "post-install-cmd": [
             "MyProject\\Installer::postInstall"
             ]
