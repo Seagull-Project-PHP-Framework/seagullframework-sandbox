@@ -44,7 +44,7 @@
         }
 	],
     "autoload": {
-        "psr-0": { "MyProject": "src/" }
+        "psr-0": { "": "src/" }
     },
     "require" : {
         "php" : ">=5.2.1",
