@@ -9,7 +9,7 @@
         processIsolation            = "false"
         stopOnFailure               = "false"
         syntaxCheck                 = "false"
-        bootstrap                   = "bootstrap.php"
+        bootstrap                   = "bootstrap-phpunit.php"
         >
 
     <testsuites>
@@ -23,7 +23,7 @@
 
 <!--<phpunit backupGlobals="true"-->
          <!--backupStaticAttributes="false"-->
-         <!--&lt;!&ndash;bootstrap="/path/to/bootstrap.php"&ndash;&gt;-->
+         <!--&lt;!&ndash;bootstrap="/path/to/bootstrap-phpunit.php"&ndash;&gt;-->
          <!--cacheTokens="false"-->
          <!--colors="false"-->
          <!--convertErrorsToExceptions="true"-->
