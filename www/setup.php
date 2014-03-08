@@ -98,11 +98,6 @@ define('SGL_CACHE_LIBS', (is_file($varDir . '/ENABLE_LIBCACHE.txt'))
     ? true
     : false);
 
-//  are we doing a minimal install?
-define('SGL_MINIMAL_INSTALL', (is_file($rootDir . '/MINIMAL_INSTALL.txt'))
-    ? true
-    : false);
-
 SGL_FrontController::init();
 
 session_start();
